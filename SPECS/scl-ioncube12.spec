@@ -17,7 +17,7 @@ Vendor:  cPanel, Inc.
 Summary: v12 Loader for ionCube-encoded PHP files
 Version: 12.0.5
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
-%define release_prefix 2
+%define release_prefix 3
 Release: %{release_prefix}%{?dist}.cpanel
 License: Redistributable
 Group:   Development/Languages
@@ -81,6 +81,9 @@ EOF
 %{php_extdir}/ioncube_loader_lin_%{php_version}.so
 
 %changelog
+* Mon Dec 16 2024 Dan Muey <daniel.muey@webpros.com> - 12.0.5-3
+- ZC-12441: Address deb’s versioned-dir situation
+
 * Tue Apr 04 2023 Julian Brown <julian.brown@cpanel.net> - 12.0.5-2
 - ZC-10047: Do not build on Ubuntu 22
 
